@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="progress">
+        <p>Loading...</p>
+        <div class="progress-container">
+            <div class="progress-bar">
+    
+            </div>
+        </div><!---  Progress bar -->
+    </div>
+
+    <div class="welcome-msg">
+        Will You Marry Me? &#128525;
+    </div>
+
+    <script src="./jquery.min.js"></script>
+    <script>
+        $(".progress-bar").css({'width':'0'});
+        $(".welcome-msg").css({'display':'none'});
+        $(".progress").show();
+
+        //Initialize a variable to start counter
+        var init = 0;
+
+        //Create a function to increment the counter
+        function my_func(value){
+            init += value;
+        }
+
+        const counter = setInterval(function(){
+            my_func(1);
+
+            var loader = init+'%';
+            $(".progress-bar").css({'width':''+loader+''});
+
+            //Clear Interval if init = 100
+            if(init == 100){
+                clearInterval(counter);
+                $(".welcome-msg").show();
+                $(".progress").hide();
+            }
+        },100);
+        
+    </script>
+</body>
+</html>

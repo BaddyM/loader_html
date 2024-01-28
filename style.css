@@ -1,0 +1,45 @@
+@font-face {
+    font-family: alien-encounter;
+    src: url('./Alien-Encounters-Regular.ttf');
+}
+.progress{
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-top: 40vh;
+}
+.progress-container{
+    border-radius: 20px;
+    padding: 5px;
+    border: 1px purple solid;
+}
+.progress-bar{
+    height:25px;
+    border-radius: 20px;
+    background: linear-gradient(to left, #cc2b5e, #753a88);
+}
+.welcome-msg{
+    margin-top: 30vh;
+    text-align: center;
+    font-size: 100px;
+    color: blue;
+    font-family: 'alien-encounter';
+}
+p{
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*------------------ Responsive --------------------------*/
+@media only screen and (max-width:768px){
+    .progress{
+        width: 90% !important;
+        margin-top: 40vh;
+    }
+    .welcome-msg{
+        margin-top: 20vh;
+        text-align: center;
+    }
+}
